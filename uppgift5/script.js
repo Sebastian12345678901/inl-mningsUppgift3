@@ -1,11 +1,8 @@
-//skapar en array med 100 random nummer mellan 1 och 6.
+// skapar en array med 100 random nummer mellan 1 och 6.
 function randomDice(){
     let array = [];
-    for(i = 0 ; i < 1000 ; i++){
-         
-            
-        array.push(Math.round(Math.random() * 5 + 1));
-        
+    for(i = 0 ; i < 1000 ; i++){ 
+        array.push(Math.floor(Math.random() * 6 + 1));
     }   
 
     return array;
@@ -30,7 +27,7 @@ function print(array){
         else if(array[i] == 5){five++}
         else if(array[i] == 6){six++}
     }
-    
+    console.log(one + two + three + four + five + six);
         document.write(`arrayen innehåller:${array.length} tal <br> ettor: ${one} <br> tvåor: ${two}<br> treor: ${three} <br> fyror: ${four} <br> femmor: ${five} <br> sexor: ${six}`);    
 }
 print(randomDice());
